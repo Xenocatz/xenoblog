@@ -1,14 +1,10 @@
 import Image from "next/image";
-import { supabaseServer } from "../lib/supabase/server";
 
 export default async function AuthLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const { data } = await (await supabaseServer()).auth.getUser();
-  console.log(data);
-
   return (
     <>
       <main>
