@@ -1,8 +1,6 @@
-import { ButtonGoogleOAuth } from "@/ui/component/button";
-import InputForm from "@/ui/component/input";
-import { BtnTest } from "@/ui/test/test";
+import { ButtonGoogleOAuth } from "@/component/ui/button";
+import InputForm from "@/component/ui/input";
 import { Metadata } from "next";
-import { headers } from "next/headers";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -24,7 +22,6 @@ export default async function SignUp() {
       </div>
       {/* button Google */}
       <ButtonGoogleOAuth />
-      <BtnTest />
       <div className="flex w-full items-center gap-5">
         <hr className="w-full border-white/30" />
         <p className="text-sm text-white/30">or</p>

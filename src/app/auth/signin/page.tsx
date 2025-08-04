@@ -1,5 +1,5 @@
-import { ButtonGoogleOAuth } from "@/ui/component/button";
-import InputForm from "@/ui/component/input";
+import { ButtonGoogleOAuth } from "@/component/ui/button";
+import InputForm from "@/component/ui/input";
 import Link from "next/link";
 
 export default function SignIn() {
