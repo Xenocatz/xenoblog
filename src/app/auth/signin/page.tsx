@@ -1,5 +1,4 @@
-import { ButtonGoogleOAuth } from "@/component/ui/button";
-import InputForm from "@/component/ui/input";
+import { ButtonGoogleOAuth, SigninForm } from "@/components/layout";
 import Link from "next/link";
 
 export default function SignIn() {
@@ -19,26 +18,8 @@ export default function SignIn() {
         <p className="text-sm text-white/30">or</p>
         <hr className="w-full border-white/30" />
       </div>
-      <form className="flex w-full flex-col gap-3 lg:gap-4">
-        <InputForm
-          name="Email"
-          placeholder="eg. kaizen@example.com"
-          type="email"
-          required
-          autoComplete="email"
-        />
-        <InputForm
-          name="Password"
-          placeholder="enter your password"
-          type="password"
-          required
-          autoComplete="password"
-        />
-        {/* button */}
-        <button className="w-full cursor-pointer rounded-lg bg-white/80 px-5 py-2 text-sm font-semibold text-zinc-900 hover:bg-white lg:text-base">
-          Sign In
-        </button>
-      </form>
+      {/* form */}
+      <SigninForm />
       <p>
         <span className="text-xs text-white/60 lg:text-sm">
           Don&apos;t have an account?

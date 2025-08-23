@@ -1,4 +1,4 @@
-import SearchBar from "@/component/ui/search-bar";
+import { SearchBar } from "@/components/layout";
 
 export default function Search() {
   return (

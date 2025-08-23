@@ -1,15 +1,94 @@
+@import "../styles/_variables.scss";
+@import "../styles/_keyframe-animations.scss";
+
 @import "tailwindcss";
 
+/* Dark Mode Variables */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-primary: theme(colors.jet.900);
+  --bg-secondary: theme(colors.jet.800);
+  --text-primary: theme(colors.jet.100);
+  --text-secondary: theme(colors.jet.400);
+  --accent: theme(colors.green-yellow.500);
+  --success: theme(colors.light-green.500);
+  --info: theme(colors.cambridge-blue.500);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-parkinsans: var(--font-parkinsans);
   --font-poppins: var(--font-poppins);
+
+  /* color */
+  --color-lightGray: #1d1e24;
+  --color-charcoal-100: #0c1115;
+  --color-red-soft: #db5461;
+
+  /* Jet - Perfect untuk dark mode backgrounds dan text */
+  --color-jet-50: #f7f7f7;
+  --color-jet-100: #d7d7d6;
+  --color-jet-200: #afafae;
+  --color-jet-300: #878785;
+  --color-jet-400: #5f5f5d;
+  --color-jet-500: #363635;
+  --color-jet-600: #2b2b2a;
+  --color-jet-700: #202020;
+  --color-jet-800: #161615;
+  --color-jet-900: #0b0b0b;
+  --color-jet-950: #050505;
+
+  /* Ebony - Neutral earthy tones */
+  --color-ebony-50: #f9f9f8;
+  --color-ebony-100: #dfe0d9;
+  --color-ebony-200: #c0c1b3;
+  --color-ebony-300: #a0a18d;
+  --color-ebony-400: #7e8069;
+  --color-ebony-500: #595a4a;
+  --color-ebony-600: #47483b;
+  --color-ebony-700: #35362c;
+  --color-ebony-800: #23241d;
+  --color-ebony-900: #12120f;
+  --color-ebony-950: #0a0a08;
+
+  /* Green Yellow - Vibrant accent color */
+  --color-green-yellow-50: #fcfff9;
+  --color-green-yellow-100: #efffe4;
+  --color-green-yellow-200: #e0ffc8;
+  --color-green-yellow-300: #d0ffad;
+  --color-green-yellow-400: #c1fe91;
+  --color-green-yellow-500: #b0fe76;
+  --color-green-yellow-600: #87fe2c;
+  --color-green-yellow-700: #61de01;
+  --color-green-yellow-800: #419401;
+  --color-green-yellow-900: #204a00;
+  --color-green-yellow-950: #0f2200;
+
+  /* Light Green - Success states & nature themes */
+  --color-light-green-50: #f6fdf6;
+  --color-light-green-100: #e5fbe4;
+  --color-light-green-200: #ccf6c9;
+  --color-light-green-300: #b2f2ad;
+  --color-light-green-400: #98ed92;
+  --color-light-green-500: #81e979;
+  --color-light-green-600: #45df3b;
+  --color-light-green-700: #28b61e;
+  --color-light-green-800: #1a7914;
+  --color-light-green-900: #0d3d0a;
+  --color-light-green-950: #061e05;
+
+  /* Cambridge Blue - Professional & calming */
+  --color-cambridge-blue-50: #f7faf8;
+  --color-cambridge-blue-100: #e9f1eb;
+  --color-cambridge-blue-200: #d3e4d7;
+  --color-cambridge-blue-300: #bdd6c3;
+  --color-cambridge-blue-400: #a6c9ae;
+  --color-cambridge-blue-500: #8fbb99;
+  --color-cambridge-blue-600: #67a275;
+  --color-cambridge-blue-700: #4c7b57;
+  --color-cambridge-blue-800: #32523a;
+  --color-cambridge-blue-900: #19291d;
+  --color-cambridge-blue-950: #0c140e;
+
+  /* animate  */
 }
 .purple-gradient {
   background: linear-gradient(
@@ -23,6 +102,6 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--color-charcoal-100);
+  color: var(--color-jet-100);
 }

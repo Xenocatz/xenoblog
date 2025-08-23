@@ -4,6 +4,8 @@ const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY as string;
 if (!supabaseUrl || !supabaseKey) {
   throw new Error("Missing Supabase environment variables");
 }
-const supabaseClient = createBrowserClient(supabaseUrl, supabaseKey);
+const supabaseClient = () => {
+  return createBrowserClient(supabaseUrl, supabaseKey);
+};
 
 export default supabaseClient;

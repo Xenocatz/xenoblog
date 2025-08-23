@@ -1,6 +1,5 @@
-import { SidebarProvider } from "@/component/context/side-bar-provider";
-import Navbar from "@/component/layout/nav-bar";
-import Sidebar from "@/component/layout/side-bar";
+import { ToggleProvider } from "@/components/common";
+import { Navbar, Sidebar } from "@/components/layout";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -15,16 +14,14 @@ export default function Dashboard({
 }>) {
   return (
     <>
-      <main className="h-screen font-poppins text-white">
-        <SidebarProvider>
+      <main className="h-screen overflow-hidden font-poppins">
+        <ToggleProvider>
           <Navbar />
-          <div className="flex h-full bg-zinc-950">
+          <div className="flex h-full">
             <Sidebar />
-            <div className="flex-grow transition-transform duration-200">
-              {children}
-            </div>
+            <div className="w-full">{children}</div>
           </div>
-        </SidebarProvider>
+        </ToggleProvider>
       </main>
     </>
   );

@@ -1,5 +1,4 @@
-import { ButtonGoogleOAuth } from "@/component/ui/button";
-import InputForm from "@/component/ui/input";
+import { ButtonGoogleOAuth, SignupForm } from "@/components/layout";
 import { Metadata } from "next";
 import Link from "next/link";
 
@@ -29,53 +28,7 @@ export default async function SignUp() {
       </div>
 
       {/* form */}
-      <form className="flex w-full flex-col gap-3 lg:gap-4">
-        <div className="flex gap-4 lg:gap-5">
-          <InputForm
-            name="Full name"
-            placeholder="eg. Asep kadachi"
-            type="text"
-            autoComplete="name"
-            required
-          />
-          <InputForm
-            name="Username"
-            placeholder="e.g Xenoid"
-            type="text"
-            autoComplete="off"
-            required
-          />
-        </div>
-        <InputForm
-          name="Email"
-          placeholder="eg. kaizen@example.com"
-          type="email"
-          autoComplete="email"
-          required
-        />
-        <InputForm
-          name="Password"
-          placeholder="Password"
-          type="password"
-          autoComplete="new-password"
-          required
-        />
-        <p className="text-xs text-white/30">
-          Password must be at least 6 characters
-        </p>
-        <InputForm
-          name="Confirm Password"
-          placeholder="Password"
-          type="password"
-          autoComplete="new-password"
-          required
-        />
-        <p className="text-xs text-white/30">Enter your password again</p>
-        {/* button */}
-        <button className="w-full cursor-pointer rounded-lg bg-white/80 px-5 py-2 text-sm font-semibold text-zinc-900 hover:bg-white lg:text-base">
-          Sign Up
-        </button>
-      </form>
+      <SignupForm />
       <p>
         <span className="text-xs text-white/60 lg:text-sm">
           Already have an account?

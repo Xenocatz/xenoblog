@@ -9,7 +9,7 @@ export async function GET(request: Request) {
   let next = searchParams.get("next") ?? "/";
   if (!next.startsWith("/")) {
     // if "next" is not a relative URL, use the default
-    next = "/dashboard";
+    next = "/";
   }
 
   if (code) {
@@ -28,22 +28,15 @@ export async function GET(request: Request) {
       if (user && user.id && !userError) {
         const supaAdmin = await supabaseAdmin();
         // add user ke supabase
-        const userData = user.user_metadata;
-        const { error } = await supaAdmin
-          .from("profiles")
-          .upsert(
-            {
-              id: user.id,
-              email: user.email,
-              username: userData.name || "guest",
-              fullname: userData.full_name || userData.name || "",
-              avatar_url: userData.avatar_url,
-            },
-            {
-              onConflict: "id",
-            },
-          )
-          .single();
+        const { error } = await supaAdmin.from("profiles").upsert(
+          {
+            id: user.id,
+            email: user.email,
+          },
+          {
+            onConflict: "id",
+          },
+        );
         if (error) {
           console.error("gagal insert user", error);
         }
